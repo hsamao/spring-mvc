@@ -24,7 +24,7 @@
 
 </div>
 
-<table>
+<table border="solid">
     <tr>
         <td><c:out value="${person.id}"/></td>
     </tr>
@@ -38,6 +38,36 @@
         <td><c:out value="${person.grade}"/></td>
     </tr>
 </table>
+
+<form:form method="post" action="/app/main/form" commandName="person">
+    <table>
+        <tr>
+            <td>ID</td>
+            <td><form:input path="id" /></td>
+        </tr>
+
+        <tr>
+            <td>First Name</td>
+            <td><form:input path="firstName" /></td>
+        </tr>
+
+        <tr>
+            <td>Last Name</td>
+            <td><form:input path="lastName" /></td>
+        </tr>
+
+        <tr>
+            <td>id</td>
+            <td><form:input path="grade" /></td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="send"/>
+            </td>
+        </tr>
+    </table>
+</form:form>
 
 
 
